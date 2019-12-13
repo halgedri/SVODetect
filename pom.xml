@@ -12,25 +12,29 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
+        <defaultGoal>clean,package</defaultGoal>
     </build>
 
     <dependencies>
     <!-- https://mvnrepository.com/artifact/net.portswigger.burp.extender/burp-extender-api -->
-    <dependency>
-        <groupId>net.portswigger.burp.extender</groupId>
-        <artifactId>burp-extender-api</artifactId>
-        <version>1.7.22</version>
-    </dependency>
+        <dependency>
+            <groupId>net.portswigger.burp.extender</groupId>
+            <artifactId>burp-extender-api</artifactId>
+            <version>1.7.22</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations-java5</artifactId>
-            <version>RELEASE</version>
+            <version>18.0.0</version>
             <scope>compile</scope>
         </dependency>
 

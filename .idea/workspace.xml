@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70ba19ff-61c9-4157-b27e-7bba831c1ad9" name="Default Changelist" comment="" />
+    <list default="true" id="70ba19ff-61c9-4157-b27e-7bba831c1ad9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/detection/RespDiffs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/scanner/MappingTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/scanner/SVOScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/scanner/SVOScanIssue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/startingPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/svo_gui/UiComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/detection/diffSites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/detection/diffSites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/detection/diffSitesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/detection/diffSitesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loadHeaders/headers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scanner/Headers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loadHeaders/websitesInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/plugin/BurpExtender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/SVOScanner.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/detection/resultDetection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/detection/resultDetection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/loadHeaders/headers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin/BurpExtender.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SVOScanner" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -13,6 +35,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -22,6 +47,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1UFwNQhJD3uti9wTxFqOj5dkpDs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,9 +55,47 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.11820328" />
+    <property name="project.structure.side.proportion" value="0.13422817" />
+  </component>
+  <component name="RunManager" selected="Application.startingPoint">
+    <configuration name="startingPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="startingPoint" />
+      <module name="SVOScanner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SVOScanner []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.startingPoint" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -58,22 +122,71 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="468" y="199" width="847" height="677" key="#Project_Structure" timestamp="1575136289255">
+    <state x="468" y="199" width="847" height="677" key="#Project_Structure" timestamp="1575383050991">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="468" y="199" width="847" height="677" key="#Project_Structure/67.27.1613.1023@67.27.1613.1023" timestamp="1575136289255" />
+    <state x="468" y="199" width="847" height="677" key="#Project_Structure/67.27.1613.1023@67.27.1613.1023" timestamp="1575383050991" />
+    <state x="151" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575368764998">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="151" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1575368764998" />
     <state x="561" y="342" width="650" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575136980532">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="561" y="342" width="650" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1613.1023@67.27.1613.1023" timestamp="1575136980532" />
-    <state x="681" y="256" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1575295241444">
+    <state x="681" y="256" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1575645269474">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="681" y="256" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1613.1023@67.27.1613.1023" timestamp="1575295241444" />
-    <state x="503" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1575291361017">
+    <state x="681" y="256" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1613.1023@67.27.1613.1023" timestamp="1575645269474" />
+    <state width="1567" height="152" key="GridCell.Tab.0.bottom" timestamp="1576244480045">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="503" y="346" key="com.intellij.ide.util.TipDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1575291361017" />
+    <state width="1567" height="152" key="GridCell.Tab.0.bottom/67.27.1613.1023@67.27.1613.1023" timestamp="1576244480045" />
+    <state width="1567" height="152" key="GridCell.Tab.0.center" timestamp="1576244480043">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state width="1567" height="152" key="GridCell.Tab.0.center/67.27.1613.1023@67.27.1613.1023" timestamp="1576244480043" />
+    <state width="1567" height="152" key="GridCell.Tab.0.left" timestamp="1576244480042">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state width="1567" height="152" key="GridCell.Tab.0.left/67.27.1613.1023@67.27.1613.1023" timestamp="1576244480042" />
+    <state width="1567" height="152" key="GridCell.Tab.0.right" timestamp="1576244480043">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state width="1567" height="152" key="GridCell.Tab.0.right/67.27.1613.1023@67.27.1613.1023" timestamp="1576244480043" />
+    <state x="356" y="115" width="1024" height="845" key="SettingsEditor" timestamp="1575379908803">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="356" y="115" width="1024" height="845" key="SettingsEditor/67.27.1613.1023@67.27.1613.1023" timestamp="1575379908803" />
+    <state x="503" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1576245757218">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="503" y="346" key="com.intellij.ide.util.TipDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1576245757218" />
+    <state x="641" y="457" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576005876866">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="641" y="457" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1613.1023@67.27.1613.1023" timestamp="1576005876866" />
+    <state x="537" y="246" width="672" height="677" key="run.anything.popup" timestamp="1576154526073">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="537" y="246" width="672" height="677" key="run.anything.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1576154526073" />
+    <state x="536" y="250" key="search.everywhere.popup" timestamp="1576074204021">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="536" y="250" key="search.everywhere.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1576074204021" />
   </component>
 </project>

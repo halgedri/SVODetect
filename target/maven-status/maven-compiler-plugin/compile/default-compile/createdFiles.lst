@@ -1,0 +1,10 @@
+startingPoint.class
+detection/diffSites.class
+scanner/MappingTableModel.class
+svo_gui/UiComponents.class
+burp/BurpExtender.class
+detection/diffSitesTest.class
+detection/resultDetection.class
+detection/RespDiffs.class
+scanner/SVOScanIssue.class
+scanner/Headers.class
