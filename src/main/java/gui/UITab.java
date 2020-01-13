@@ -14,12 +14,13 @@ public class UITab implements ITab {
     public UITab(IBurpExtenderCallbacks callbacks) {
         this.callbacks = callbacks;
         this.main = new UIMain(callbacks);
-        //callbacks.customizeUiComponent(main);
+        callbacks.customizeUiComponent(main);
+        callbacks.addSuiteTab(this);
     }
 
     @Override
     public String getTabCaption() {
-        return "SVODetect Results";
+        return "SVODetect";
     }
 
     @Override
@@ -28,7 +29,7 @@ public class UITab implements ITab {
         return main;
     }
 
-    public UIMain getMain() {
+    public UIMain getUiMain() {
         return main;
     }
 }

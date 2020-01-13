@@ -1,34 +1,31 @@
 package burp;
 
+import detection.SessionHandling;
 import gui.UITab;
 
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
+
 
 public class BurpExtender implements IBurpExtender, IScannerCheck {
 
     private IBurpExtenderCallbacks callbacks;
     public IExtensionHelpers helpers;
     private PrintWriter stdout;
-    private UITab uiTab = new UITab(callbacks);
+    private UITab uiTab;
+    public SessionHandling sessionAction = new SessionHandling();
 
     private static final String extensionName = "SVODetect";
     private URL url;
     private URL urlSiteMap;
-
-    public IScannerInsertionPointProvider iScannerInsertionPointProvider;
 
 
     HashMap<URL, byte[]> baseResponseMap = new HashMap<URL, byte[]>();
 
     ArrayList<URL> urlList = new ArrayList<URL>();
     ArrayList<IHttpRequestResponse> baseRequestSiteMap = new ArrayList<>();
-
-    int counter = 0;
-
 
     @Override
     public void registerExtenderCallbacks(IBurpExtenderCallbacks callbacks) {
@@ -42,40 +39,37 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
 
         callbacks.registerScannerCheck(this);
 
-        callbacks.addSuiteTab(uiTab);
+        uiTab = new UITab(callbacks);
 
+        //callbacks.registerSessionHandlingAction(sessionAction);
     }
 
 
     @Override
     public List<IScanIssue> doPassiveScan(IHttpRequestResponse baseRequestResponse) {
 
-        //TODO findet den PIRVATE Bereich nicht!!
-        // private/mainmenu .. jetzt manuell einfügen und manuell prüfen
-        // dann auf Analyse gehen
-
-        List<IParameter> baseRequestParamList = new ArrayList<>();
-
         byte[] baseRequest = baseRequestResponse.getRequest();
 
-        URL baseRequestURL = helpers.analyzeRequest(baseRequest).getUrl();
+        IHttpRequestResponse[] siteMap = callbacks.getSiteMap("http://127.1.1.1:8080/puzzlemall");
 
-        try {
-            URL testURL =  new URL ("127.1.1.1:8080/puzzlemall/");
-            if ((baseRequestURL.toString()).equals("127.1.1.1:8080/puzzlemall/login.jsp")){
-                callbacks.sendToSpider(testURL);
-                stdout.println("In the Spider");
-            }
+        // For every Item in siteMap a new Request is build
+        for (IHttpRequestResponse siteMapReqRep : siteMap) {
 
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+            URL siteMapUrl = helpers.analyzeRequest(siteMapReqRep).getUrl();
+
+            byte[] basePayload = helpers.buildHttpRequest(siteMapUrl);
+            IHttpRequestResponse baseResponse = callbacks.makeHttpRequest(baseRequestResponse.getHttpService(), basePayload);
+
+            byte[] baseResponseCheck = baseResponse.getResponse();
+
+            baseResponseMap.put(siteMapUrl, baseResponseCheck);
         }
 
-
-
-        baseRequestParamList = helpers.analyzeRequest(baseRequest).getParameters();
-
-        /*stdout.println("URL:  " + baseRequestURL);
+        /*
+        * To get all Parameters in a Request, with the used Method
+        *
+        List<IParameter> baseRequestParamList = new ArrayList<>();
+        baseRequestParamList = helpers.analyzeRequest(baseRequestResponse).getParameters();
         for (IParameter param : baseRequestParamList) {
             stdout.println(param.getName());
         }
@@ -84,97 +78,24 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
 
         stdout.println("Parameter Liste:  " + baseRequestParamList + "\n");
         stdout.println("Method: " + baseMethod + "\n" + "\n" + "\n" + "\n");
+
         */
-
-
-        byte[] basePayload = helpers.buildHttpRequest(baseRequestURL);
-        IHttpRequestResponse baseResponse = callbacks.makeHttpRequest(baseRequestResponse.getHttpService(), basePayload);
-
-        byte[] baseResponseCheck = baseResponse.getResponse();
-
-        String baseStringURL = baseRequestURL.toString();
-
-        stdout.println(baseRequestURL);
-
-        IHttpRequestResponse[] temp = callbacks.getSiteMap(null);
-        stdout.println("LENGTH SITEMAP ZUR URL "+temp.length);
-
-        if (baseStringURL.equals("http://127.1.1.1:8080/puzzlemall/private/mainmenu.jsp")) {
-            stdout.println(baseRequestURL);
-            stdout.println("BaseResponse:   " + helpers.bytesToString(baseResponseCheck));
-        }
-
-
-        baseResponseMap.put(baseRequestURL, baseResponseCheck);
-
-
-          stdout.println(baseResponseMap.keySet());
-
         return null;
     }
 
-
-
-
-
-
+    int counter = 0;
 
     //iScannerInsertionPoint reagiert auf POST
     @Override
-    public List<IScanIssue> doActiveScan(IHttpRequestResponse scanRequestResponse, IScannerInsertionPoint iScannerInsertionPoint) {
-
-
-        URL scanRequestURL = helpers.analyzeRequest(scanRequestResponse).getUrl();
-
-        //stdout.println(scanRequestURL);
-
-
-/*
-
-        //callbacks.sendToSpider(urlSiteMap);
-        //Arrays.stream(callbacks.getSiteMap(urlSiteMap)).forEach(e -> analyseRequestResponse(e));
-
-        URL url2 = helpers.analyzeRequest(scanRequestResponse).getUrl();
-
-        String baseVal = iScannerInsertionPoint.getBaseValue();
-        String insertionPointName = iScannerInsertionPoint.getInsertionPointName();
-
-        HashMap<URL, byte[]> scanResponseMap = new HashMap<URL, byte[]>();
+    public List<IScanIssue> doActiveScan(IHttpRequestResponse iHttpRequestResponse, IScannerInsertionPoint iScannerInsertionPoint) {
 
         switch (iScannerInsertionPoint.getInsertionPointType()) {
             case IScannerInsertionPoint.INS_PARAM_BODY:
-
-                Map<URL, List> responseDiffMap = new HashMap<URL, List>();
-
-                for (URL url : baseResponseMap.keySet()) {
-
-                    byte[] scanPayload = helpers.buildHttpRequest(url);
-                    IHttpRequestResponse scanRequest = callbacks.makeHttpRequest(scanRequestResponse.getHttpService(), scanPayload);
-
-                    byte[] scanResponseInByte = scanRequest.getResponse();
-                    // String scanResponse = helpers.bytesToString(scanResponseInByte);
-
-
-                    String uro = url.toString();
-
-                    stdout.println(url);
-
-                    if (uro.equals("http://127.1.1.1:8080/puzzlemall/private/mainmenu.jsp")) {
-                        stdout.println(url);
-                        stdout.println("ScanResponse: " + helpers.bytesToString(scanResponseInByte));
-                    }
-                    scanResponseMap.put(url, scanResponseInByte);
-
-                }
-
-
-                //responseDiffMap = responseDiff(scanResponseMap, baseResponseMap);
+                getResponseDiff(iHttpRequestResponse, iScannerInsertionPoint);
                 break;
             default:
                 break;
-        }*/
-
-
+        }
         return null;
     }
 
@@ -188,13 +109,9 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
         }
     }
 
-    public Map<URL, List> responseDiff(HashMap<URL, byte[]> first, HashMap<URL, byte[]> second) {
+    public Map<URL, List> analyzeResponseDiff(HashMap<URL, byte[]> first, HashMap<URL, byte[]> second) {
 
-
-        //TODO wenn man zunächst Password Recovery Aufruft und danach private/mainmenu sollte es einen Unterschied geben
-
-        Map<URL, List> responseDiffsMap = new HashMap<>();
-
+        Map<URL, List> responseDiffMap = new HashMap<>();
 
         for (URL url : first.keySet()) {
 
@@ -204,41 +121,115 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
             byte[] secondBytesResponse = second.get(url);
 
             responseVariationsList = helpers.analyzeResponseVariations(firstBytesResponse, secondBytesResponse).getVariantAttributes();
+            //stdout.println("Response Variations:  " + responseVariationsList);
+            /*
 
-
-            stdout.println("Response Variations:  " + responseVariationsList);
-
-         /*   if (firstBytesResponse.length == secondBytesResponse.length) {
+            if (firstBytesResponse.length == secondBytesResponse.length) {
                 for (int k = 0; k < firstBytesResponse.length; k++) {
 
                     if (firstBytesResponse[k] == secondBytesResponse[k]) {
 
                     } else {
 
-
-
                         stdout.println("Here is a Difference ");
-
                         stdout.println(k);
 
-                        stdout.println(firstBytesResponse[k] + "       " + secondBytesResponse[k]);
+                        //stdout.println(firstBytesResponse[k] + "       " + secondBytesResponse[k]);
+                        //stdout.println(helpers.bytesToString(firstBytesResponse) + " \n  second:     \n   "+ helpers.bytesToString(secondBytesResponse) );
+
                     }
                 }
             }
-/*
-            else{
-                responseVariationsList.add("They differ");
-            }
-
-            if (firstBytesResponse.equals(secondBytesResponse)) {
+*/
+            /*if (firstBytesResponse.equals(secondBytesResponse)) {
                 responseVariationsList.add(("They are Equal"));
             } else {
 
-                // responseVariationsList = helpers.analyzeResponseVariations(firstBytesResponse, secondBytesResponse).getVariantAttributes();
-            }
-            responseDiffsMap.put(url, responseVariationsList);*/
+                responseVariationsList = helpers.analyzeResponseVariations(firstBytesResponse, secondBytesResponse).getVariantAttributes();
+            }*/
+            responseDiffMap.put(url, responseVariationsList);
+
+
         }
-        return responseDiffsMap;
+        // stdout.println("Response Variant Attributes:  "+responseDiffMap);
+        return responseDiffMap;
 
     }
+
+    //TODO Change Method Name; 500 internal server error
+    public void getResponseDiff(IHttpRequestResponse insertionPointRequestResponse, IScannerInsertionPoint iScannerInsertionPoint) {
+
+        URL insertionPointRequestResponseUrl = helpers.analyzeRequest(insertionPointRequestResponse).getUrl();
+        IHttpService iHttpService = insertionPointRequestResponse.getHttpService();
+        IResponseInfo insertionPointResponseInfo = helpers.analyzeResponse(insertionPointRequestResponse.getResponse());
+        List<ICookie> insertionPointResponseCookie = insertionPointResponseInfo.getCookies();
+        IParameter cookieResponseParameter = null;
+
+        Map<URL, byte[]> scanResponseMap = new HashMap<URL, byte[]>();
+
+        for (ICookie iCookie : insertionPointResponseCookie) {
+            String cookieName = iCookie.getName();
+            String cookieValue = iCookie.getValue();
+            cookieResponseParameter = helpers.buildParameter(cookieName, cookieValue, (byte) 0x2);
+        }
+
+        if (insertionPointResponseCookie.size() == 0) {
+            // hole das Cookie vom Request und builde ein Parameter damit
+
+            List<IParameter> requestParamter = helpers.analyzeRequest(insertionPointRequestResponse).getParameters();
+
+        }
+
+        //Set<URL> baseResponseMapUrlKeySet = baseResponseMap.keySet();
+
+        stdout.println("Url from the InsertionPoint:  " + insertionPointRequestResponseUrl);
+
+        for (URL url : baseResponseMap.keySet()) {
+
+            byte[] baseResponse = baseResponseMap.get(url);
+            IHttpRequestResponse scanRequestResponse;
+
+            IResponseInfo baseResponseInfo = helpers.analyzeResponse(baseResponse);
+            List<String> baseResponseInfoHeaders = baseResponseInfo.getHeaders();
+
+            String urlTest = url.toString();
+            // helpers.buildHttpMessage(); mit baseRequestInfoHeader, Request holen für eine bestimmte URL
+
+            byte[] scanPayload = helpers.buildHttpRequest(url);
+
+            if (cookieResponseParameter != null) {
+                byte[] scanPayload2 = helpers.addParameter(scanPayload, cookieResponseParameter);
+                scanRequestResponse = callbacks.makeHttpRequest(iHttpService, scanPayload2);
+            } else {
+                //nimm das Cookie vom Request
+
+                scanRequestResponse = callbacks.makeHttpRequest(iHttpService, scanPayload);
+            }
+
+            byte[] scanResponse = scanRequestResponse.getResponse();
+
+            IResponseInfo scanResponseInfo = helpers.analyzeResponse(scanResponse);
+
+            //List <String> scanRequestHeader = helpers.analyzeRequest(scanRequestResponse).getHeaders();
+
+            IResponseVariations iResponseVariations = helpers.analyzeResponseVariations(baseResponse, scanResponse);
+
+            List<String> variantAttributes = iResponseVariations.getInvariantAttributes();
+
+            stdout.println(url);
+            stdout.println(variantAttributes);
+            for (String attribute : variantAttributes) {
+                int baseResponseAttribute = iResponseVariations.getAttributeValue(attribute, 0);
+                int scanResponseAttribute = iResponseVariations.getAttributeValue(attribute, 0);
+
+                stdout.println("baseResponseAttribute: " + baseResponseAttribute);
+                stdout.println("scanResponseAttribute: " + scanResponseAttribute);
+
+            }
+
+
+        }
+
+    }
+
 }

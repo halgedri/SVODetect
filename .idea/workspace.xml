@@ -2,33 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70ba19ff-61c9-4157-b27e-7bba831c1ad9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/burp/unrelevantInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIAbout.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIAbout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIResultGraph.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UIResultGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/UITab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/detection/SessionHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/detection/RespDiffs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scanner/Headers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scanner/MappingTableModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scanner/SVOScan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/svo_gui/UiComponents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIAbout.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIAbout.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIAbout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIAbout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIResultGraph.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIResultGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UITab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UITab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/startingPoint.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SVOScanner-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SVOScanner-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/burp/BurpExtender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/burp/BurpExtender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/detection/RespDiffs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scanner/Headers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scanner/MappingTableModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/svo_gui/UiComponents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIAbout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UIAbout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIHowTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UIHowTo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UIMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIResultGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/UITab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UITab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/startingPoint.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,21 +84,34 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="left" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="279" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="235" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="right" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="285" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="222" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.11820328" />
     <property name="project.structure.side.proportion" value="0.13422817" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.intellij.uiDesigner.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.startingPoint">
+  <component name="RunManager" selected="Maven.SVOScanner []">
+    <configuration name="UIAbout" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.UIAbout" />
+      <module name="SVOScanner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="startingPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="startingPoint" />
       <module name="SVOScanner" />
@@ -113,6 +144,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UIAbout" />
         <item itemvalue="Application.startingPoint" />
       </list>
     </recent_temporary>
@@ -168,10 +200,10 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="561" y="342" width="650" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1613.1023@67.27.1613.1023" timestamp="1575136980532" />
-    <state x="681" y="256" width="603" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1578338986353">
+    <state x="681" y="256" width="603" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1578669430863">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="681" y="256" width="603" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1613.1023@67.27.1613.1023" timestamp="1578338986353" />
+    <state x="681" y="256" width="603" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1613.1023@67.27.1613.1023" timestamp="1578669430863" />
     <state x="626" y="398" width="494" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1578337646437">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
@@ -180,38 +212,43 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="255" y="27" width="1217" height="1023" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578316917277" />
-    <state x="606" y="286" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578337246865">
+    <state x="606" y="286" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578413632909">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="606" y="286" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578337246865" />
-    <state x="480" y="134" width="777" height="807" key="CommitChangelistDialog2" timestamp="1576927605876">
+    <state x="606" y="286" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578413632909" />
+    <state x="686" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1077@67.27.1853.1077" timestamp="1578392009071" />
+    <state x="480" y="134" width="777" height="807" key="CommitChangelistDialog2" timestamp="1578767432764">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="480" y="134" width="777" height="807" key="CommitChangelistDialog2/67.27.1613.1023@67.27.1613.1023" timestamp="1576927605876" />
+    <state x="480" y="134" width="777" height="807" key="CommitChangelistDialog2/67.27.1613.1023@67.27.1613.1023" timestamp="1578767432764" />
     <state x="656" y="295" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576927579704">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="656" y="295" width="424" height="484" key="FileChooserDialogImpl/67.27.1613.1023@67.27.1613.1023" timestamp="1576927579704" />
-    <state width="1807" height="125" key="GridCell.Tab.0.bottom" timestamp="1578383153297">
-      <screen x="67" y="27" width="1853" height="957" />
+    <state width="1567" height="105" key="GridCell.Tab.0.bottom" timestamp="1578905401042">
+      <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="125" key="GridCell.Tab.0.bottom/67.27.1613.1023@67.27.1613.1023" timestamp="1578381905322" />
-    <state width="1807" height="125" key="GridCell.Tab.0.bottom/67.27.1853.957@67.27.1853.957" timestamp="1578383153297" />
-    <state width="1807" height="125" key="GridCell.Tab.0.center" timestamp="1578383153295">
-      <screen x="67" y="27" width="1853" height="957" />
+    <state width="1567" height="105" key="GridCell.Tab.0.bottom/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401042" />
+    <state width="1807" height="137" key="GridCell.Tab.0.bottom/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243127" />
+    <state width="1807" height="126" key="GridCell.Tab.0.bottom/67.27.1853.957@67.27.1853.957" timestamp="1578524010680" />
+    <state width="1567" height="105" key="GridCell.Tab.0.center" timestamp="1578905401039">
+      <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="125" key="GridCell.Tab.0.center/67.27.1613.1023@67.27.1613.1023" timestamp="1578381905321" />
-    <state width="1807" height="125" key="GridCell.Tab.0.center/67.27.1853.957@67.27.1853.957" timestamp="1578383153295" />
-    <state width="1807" height="125" key="GridCell.Tab.0.left" timestamp="1578383153295">
-      <screen x="67" y="27" width="1853" height="957" />
+    <state width="1567" height="105" key="GridCell.Tab.0.center/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401039" />
+    <state width="1807" height="137" key="GridCell.Tab.0.center/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243126" />
+    <state width="1807" height="126" key="GridCell.Tab.0.center/67.27.1853.957@67.27.1853.957" timestamp="1578524010679" />
+    <state width="1567" height="105" key="GridCell.Tab.0.left" timestamp="1578905401039">
+      <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="125" key="GridCell.Tab.0.left/67.27.1613.1023@67.27.1613.1023" timestamp="1578381905320" />
-    <state width="1807" height="125" key="GridCell.Tab.0.left/67.27.1853.957@67.27.1853.957" timestamp="1578383153295" />
-    <state width="1807" height="125" key="GridCell.Tab.0.right" timestamp="1578383153297">
-      <screen x="67" y="27" width="1853" height="957" />
+    <state width="1567" height="105" key="GridCell.Tab.0.left/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401039" />
+    <state width="1807" height="137" key="GridCell.Tab.0.left/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243126" />
+    <state width="1807" height="126" key="GridCell.Tab.0.left/67.27.1853.957@67.27.1853.957" timestamp="1578524010679" />
+    <state width="1567" height="105" key="GridCell.Tab.0.right" timestamp="1578905401040">
+      <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="125" key="GridCell.Tab.0.right/67.27.1613.1023@67.27.1613.1023" timestamp="1578381905321" />
-    <state width="1807" height="125" key="GridCell.Tab.0.right/67.27.1853.957@67.27.1853.957" timestamp="1578383153297" />
+    <state width="1567" height="105" key="GridCell.Tab.0.right/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401040" />
+    <state width="1807" height="137" key="GridCell.Tab.0.right/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243127" />
+    <state width="1807" height="126" key="GridCell.Tab.0.right/67.27.1853.957@67.27.1853.957" timestamp="1578524010679" />
     <state width="1807" height="305" key="GridCell.Tab.1.bottom" timestamp="1578382369911">
       <screen x="67" y="27" width="1853" height="957" />
     </state>
@@ -236,30 +273,35 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="406" y="195" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578334223536" />
-    <state x="356" y="115" width="1024" height="845" key="SettingsEditor" timestamp="1578337385270">
+    <state x="356" y="115" width="1024" height="845" key="SettingsEditor" timestamp="1578396955651">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="356" y="115" width="1024" height="845" key="SettingsEditor/67.27.1613.1023@67.27.1613.1023" timestamp="1578337385270" />
+    <state x="356" y="115" width="1024" height="845" key="SettingsEditor/67.27.1613.1023@67.27.1613.1023" timestamp="1578396955651" />
     <state x="602" y="271" width="639" height="524" key="StructurePopup" timestamp="1576663145696">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="602" y="271" width="639" height="524" key="StructurePopup/67.27.1613.1023@67.27.1613.1023" timestamp="1576663145696" />
-    <state x="503" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1578326756584">
+    <state x="503" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1578907610250">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="503" y="346" key="com.intellij.ide.util.TipDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578326756584" />
+    <state x="503" y="346" key="com.intellij.ide.util.TipDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578907610250" />
     <state x="641" y="457" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577039566564">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="641" y="457" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1613.1023@67.27.1613.1023" timestamp="1577039566564" />
-    <state x="647" y="242" width="442" height="590" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578336257391">
+    <state x="647" y="242" width="442" height="590" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578400512950">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="647" y="242" width="442" height="590" key="com.intellij.testIntegration.createTest.CreateTestDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578336257391" />
-    <state x="606" y="421" width="524" height="232" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1578337347474">
-      <screen x="67" y="27" width="1613" height="1023" />
+    <state x="647" y="242" width="442" height="590" key="com.intellij.testIntegration.createTest.CreateTestDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578400512950" />
+    <state x="686" y="442" width="524" height="232" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1578403866505">
+      <screen x="67" y="27" width="1853" height="1077" />
     </state>
     <state x="606" y="421" width="524" height="232" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578337347474" />
+    <state x="686" y="442" width="524" height="232" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/67.27.1853.1077@67.27.1853.1077" timestamp="1578403866505" />
+    <state x="518" y="141" width="710" height="792" key="find.popup" timestamp="1578399321254">
+      <screen x="67" y="27" width="1613" height="1023" />
+    </state>
+    <state x="518" y="141" width="710" height="792" key="find.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578399321254" />
     <state x="182" y="235" width="1372" height="605" key="new project wizard" timestamp="1578310195201">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
@@ -268,13 +310,13 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="618" y="166" width="500" height="743" key="refactoring.ChangeSignatureDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578327910097" />
-    <state x="537" y="246" width="672" height="677" key="run.anything.popup" timestamp="1578299045001">
+    <state x="537" y="246" width="672" height="677" key="run.anything.popup" timestamp="1578840268866">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="537" y="246" width="672" height="677" key="run.anything.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578299045001" />
-    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1578299834028">
+    <state x="537" y="246" width="672" height="677" key="run.anything.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578840268866" />
+    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1578899732836">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578299834028" />
+    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578899732836" />
   </component>
 </project>

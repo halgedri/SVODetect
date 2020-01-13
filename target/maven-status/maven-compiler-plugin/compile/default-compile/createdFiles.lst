@@ -1,11 +1,10 @@
-startingPoint.class
 gui/UIAbout.class
 detection/diffSites.class
 burp/BurpExtender.class
 detection/diffSitesTest.class
-gui/UIResultGraph.class
 gui/UIMain.class
 detection/resultDetection.class
+detection/SessionHandling.class
 gui/UITab.class
 gui/UIHowTo.class
 scanner/SVOScanIssue.class
