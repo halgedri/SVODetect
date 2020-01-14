@@ -156,80 +156,95 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
 
     }
 
-    //TODO Change Method Name; 500 internal server error
+
     public void getResponseDiff(IHttpRequestResponse insertionPointRequestResponse, IScannerInsertionPoint iScannerInsertionPoint) {
 
-        URL insertionPointRequestResponseUrl = helpers.analyzeRequest(insertionPointRequestResponse).getUrl();
-        IHttpService iHttpService = insertionPointRequestResponse.getHttpService();
-        IResponseInfo insertionPointResponseInfo = helpers.analyzeResponse(insertionPointRequestResponse.getResponse());
-        List<ICookie> insertionPointResponseCookie = insertionPointResponseInfo.getCookies();
+        URL insertionPointRequestResponseUrl;
+        List<String> insertionPointRequestResponseHeader;
+        IHttpService iHttpService;
+        IResponseInfo insertionPointResponseInfo;
+        List<ICookie> insertionPointResponseCookieList;
         IParameter cookieResponseParameter = null;
-
+        List<IParameter> requestParameter;
+        Set<URL> baseResponseMapUrlKeySet;
         Map<URL, byte[]> scanResponseMap = new HashMap<URL, byte[]>();
+        IResponseInfo scanResponseInfo;
 
-        for (ICookie iCookie : insertionPointResponseCookie) {
-            String cookieName = iCookie.getName();
-            String cookieValue = iCookie.getValue();
-            cookieResponseParameter = helpers.buildParameter(cookieName, cookieValue, (byte) 0x2);
+        insertionPointRequestResponseUrl = helpers.analyzeRequest(insertionPointRequestResponse).getUrl();
+        insertionPointRequestResponseHeader = helpers.analyzeRequest(insertionPointRequestResponse).getHeaders();
+        insertionPointResponseInfo = helpers.analyzeResponse(insertionPointRequestResponse.getResponse());
+        insertionPointResponseCookieList = insertionPointResponseInfo.getCookies();
+
+        iHttpService = insertionPointRequestResponse.getHttpService();
+        requestParameter = helpers.analyzeRequest(insertionPointRequestResponse).getParameters();
+        baseResponseMapUrlKeySet = baseResponseMap.keySet();
+
+
+        if (!(insertionPointResponseCookieList.isEmpty())) {
+            for (ICookie iCookie : insertionPointResponseCookieList) {
+                String cookieName = iCookie.getName();
+                String cookieValue = iCookie.getValue();
+                cookieResponseParameter = helpers.buildParameter(cookieName, cookieValue, (byte) 0x2);
+            }
+        } else {
+            for (IParameter iParameter : requestParameter) {
+                Byte parameterType = iParameter.getType();
+                if (parameterType == (byte) 0x2) {
+                    String parameterValue = iParameter.getValue();
+                    String parameterName = iParameter.getName();
+                    cookieResponseParameter = helpers.buildParameter(parameterName, parameterValue, parameterType);
+                }
+            }
         }
 
-        if (insertionPointResponseCookie.size() == 0) {
-            // hole das Cookie vom Request und builde ein Parameter damit
+        for (URL url : baseResponseMapUrlKeySet) {
 
-            List<IParameter> requestParamter = helpers.analyzeRequest(insertionPointRequestResponse).getParameters();
-
-        }
-
-        //Set<URL> baseResponseMapUrlKeySet = baseResponseMap.keySet();
-
-        stdout.println("Url from the InsertionPoint:  " + insertionPointRequestResponseUrl);
-
-        for (URL url : baseResponseMap.keySet()) {
-
-            byte[] baseResponse = baseResponseMap.get(url);
-            IHttpRequestResponse scanRequestResponse;
-
-            IResponseInfo baseResponseInfo = helpers.analyzeResponse(baseResponse);
-            List<String> baseResponseInfoHeaders = baseResponseInfo.getHeaders();
-
-            String urlTest = url.toString();
-            // helpers.buildHttpMessage(); mit baseRequestInfoHeader, Request holen für eine bestimmte URL
-
-            byte[] scanPayload = helpers.buildHttpRequest(url);
-
-            if (cookieResponseParameter != null) {
-                byte[] scanPayload2 = helpers.addParameter(scanPayload, cookieResponseParameter);
-                scanRequestResponse = callbacks.makeHttpRequest(iHttpService, scanPayload2);
+            if (url.toString().equals("http://127.1.1.1:8080/puzzlemall/logout.jsp")
+                    || url.toString().equals("http://127.1.1.1:8080/puzzlemall/login.jsp")
+                    || url.toString().equals("http://127.1.1.1:8080/puzzlemall/recovery-phase2.jsp")
+                    || url.toString().equals("http://127.1.1.1:8080/puzzlemall/register-phase2.jsp")) {
             } else {
-                //nimm das Cookie vom Request
+                byte[] baseResponse = baseResponseMap.get(url);
 
-                scanRequestResponse = callbacks.makeHttpRequest(iHttpService, scanPayload);
-            }
+                IHttpRequestResponse scanRequestResponse;
+                IResponseInfo baseResponseInfo;
+                byte[] scanPayload;
+                byte[] scanPayloadWithCookie;
+                byte[] scanResponse;
+                IResponseVariations iResponseVariations;
 
-            byte[] scanResponse = scanRequestResponse.getResponse();
+                baseResponseInfo = helpers.analyzeResponse(baseResponse);
 
-            IResponseInfo scanResponseInfo = helpers.analyzeResponse(scanResponse);
+                scanPayload = helpers.buildHttpRequest(url);
+                scanPayloadWithCookie = helpers.addParameter(scanPayload, cookieResponseParameter);
 
-            //List <String> scanRequestHeader = helpers.analyzeRequest(scanRequestResponse).getHeaders();
+                scanRequestResponse = callbacks.makeHttpRequest(iHttpService, scanPayloadWithCookie);
+                scanResponse = scanRequestResponse.getResponse();
 
-            IResponseVariations iResponseVariations = helpers.analyzeResponseVariations(baseResponse, scanResponse);
+                scanResponseInfo = helpers.analyzeResponse(scanResponse);
 
-            List<String> variantAttributes = iResponseVariations.getInvariantAttributes();
+                analyseResponseDifference(baseResponse, scanResponse);
 
-            stdout.println(url);
-            stdout.println(variantAttributes);
-            for (String attribute : variantAttributes) {
-                int baseResponseAttribute = iResponseVariations.getAttributeValue(attribute, 0);
-                int scanResponseAttribute = iResponseVariations.getAttributeValue(attribute, 0);
-
-                stdout.println("baseResponseAttribute: " + baseResponseAttribute);
-                stdout.println("scanResponseAttribute: " + scanResponseAttribute);
 
             }
-
-
         }
-
     }
 
+    public Map<URL, List> analyseResponseDifference(byte[] baseResponse, byte[] scanResponse) {
+        // je mehr Attribute sich unterscheiden, desto wahrscheinlicher ist, dass die Seite sich verändert hat
+        // wie kann man den Login mit usernamen und passwort, also eine legitime Authentifizierung
+
+        IResponseVariations iResponseVariations = helpers.analyzeResponseVariations(baseResponse, scanResponse);
+
+        float variantAttributesCount = iResponseVariations.getVariantAttributes().size();
+        float invariantAttributesCount = iResponseVariations.getInvariantAttributes().size();
+
+        float attributesTotal = variantAttributesCount + invariantAttributesCount;
+
+        float variantAttributesPercentage = variantAttributesCount/attributesTotal;
+        stdout.println("SVO is " + variantAttributesPercentage + " mostlikely to happen");
+
+
+        return null;
+    }
 }

@@ -2,51 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70ba19ff-61c9-4157-b27e-7bba831c1ad9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/detection/SessionHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIAbout.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIAbout.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIAbout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIAbout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIHowTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UIMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIResultGraph.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UIResultGraph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/UITab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UITab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/startingPoint.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SVOScanner-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SVOScanner-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/burp/BurpExtender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/burp/BurpExtender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIAbout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UIAbout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIHowTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UIHowTo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UIMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/UIResultGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/UITab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/UITab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/startingPoint.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,28 +185,28 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="656" y="295" width="424" height="484" key="FileChooserDialogImpl/67.27.1613.1023@67.27.1613.1023" timestamp="1576927579704" />
-    <state width="1567" height="105" key="GridCell.Tab.0.bottom" timestamp="1578905401042">
+    <state width="1567" height="105" key="GridCell.Tab.0.bottom" timestamp="1578945743049">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="105" key="GridCell.Tab.0.bottom/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401042" />
+    <state width="1567" height="105" key="GridCell.Tab.0.bottom/67.27.1613.1023@67.27.1613.1023" timestamp="1578945743049" />
     <state width="1807" height="137" key="GridCell.Tab.0.bottom/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243127" />
     <state width="1807" height="126" key="GridCell.Tab.0.bottom/67.27.1853.957@67.27.1853.957" timestamp="1578524010680" />
-    <state width="1567" height="105" key="GridCell.Tab.0.center" timestamp="1578905401039">
+    <state width="1567" height="105" key="GridCell.Tab.0.center" timestamp="1578945743048">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="105" key="GridCell.Tab.0.center/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401039" />
+    <state width="1567" height="105" key="GridCell.Tab.0.center/67.27.1613.1023@67.27.1613.1023" timestamp="1578945743048" />
     <state width="1807" height="137" key="GridCell.Tab.0.center/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243126" />
     <state width="1807" height="126" key="GridCell.Tab.0.center/67.27.1853.957@67.27.1853.957" timestamp="1578524010679" />
-    <state width="1567" height="105" key="GridCell.Tab.0.left" timestamp="1578905401039">
+    <state width="1567" height="105" key="GridCell.Tab.0.left" timestamp="1578945743048">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="105" key="GridCell.Tab.0.left/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401039" />
+    <state width="1567" height="105" key="GridCell.Tab.0.left/67.27.1613.1023@67.27.1613.1023" timestamp="1578945743048" />
     <state width="1807" height="137" key="GridCell.Tab.0.left/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243126" />
     <state width="1807" height="126" key="GridCell.Tab.0.left/67.27.1853.957@67.27.1853.957" timestamp="1578524010679" />
-    <state width="1567" height="105" key="GridCell.Tab.0.right" timestamp="1578905401040">
+    <state width="1567" height="105" key="GridCell.Tab.0.right" timestamp="1578945743049">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state width="1567" height="105" key="GridCell.Tab.0.right/67.27.1613.1023@67.27.1613.1023" timestamp="1578905401040" />
+    <state width="1567" height="105" key="GridCell.Tab.0.right/67.27.1613.1023@67.27.1613.1023" timestamp="1578945743049" />
     <state width="1807" height="137" key="GridCell.Tab.0.right/67.27.1853.1077@67.27.1853.1077" timestamp="1578406243127" />
     <state width="1807" height="126" key="GridCell.Tab.0.right/67.27.1853.957@67.27.1853.957" timestamp="1578524010679" />
     <state width="1807" height="305" key="GridCell.Tab.1.bottom" timestamp="1578382369911">
@@ -281,10 +241,10 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="602" y="271" width="639" height="524" key="StructurePopup/67.27.1613.1023@67.27.1613.1023" timestamp="1576663145696" />
-    <state x="503" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1578907610250">
+    <state x="503" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1578931801065">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="503" y="346" key="com.intellij.ide.util.TipDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578907610250" />
+    <state x="503" y="346" key="com.intellij.ide.util.TipDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578931801065" />
     <state x="641" y="457" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577039566564">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
@@ -310,13 +270,13 @@
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
     <state x="618" y="166" width="500" height="743" key="refactoring.ChangeSignatureDialog/67.27.1613.1023@67.27.1613.1023" timestamp="1578327910097" />
-    <state x="537" y="246" width="672" height="677" key="run.anything.popup" timestamp="1578840268866">
+    <state x="537" y="246" width="672" height="677" key="run.anything.popup" timestamp="1578915283180">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="537" y="246" width="672" height="677" key="run.anything.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578840268866" />
-    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1578899732836">
+    <state x="537" y="246" width="672" height="677" key="run.anything.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578915283180" />
+    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1578945017872">
       <screen x="67" y="27" width="1613" height="1023" />
     </state>
-    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578899732836" />
+    <state x="536" y="250" width="672" height="678" key="search.everywhere.popup/67.27.1613.1023@67.27.1613.1023" timestamp="1578945017872" />
   </component>
 </project>
