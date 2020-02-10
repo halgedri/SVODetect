@@ -1,11 +1,9 @@
 gui/UIAbout.class
-detection/diffSites.class
+scanIssues/CustomScanIssue.class
+burp/RelevantInfo.class
 burp/BurpExtender.class
-detection/diffSitesTest.class
 gui/UIMain.class
-detection/resultDetection.class
 detection/SessionHandling.class
 gui/UITab.class
 gui/UIHowTo.class
-scanner/SVOScanIssue.class
-burp/unrelevantInfo.class
+scanIssues/SVOScanIssue.class

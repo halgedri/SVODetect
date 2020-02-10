@@ -1,11 +1,9 @@
-/home/hanna/IdeaProjects/SVOScanner/src/main/java/scanner/SVOScanIssue.java
 /home/hanna/IdeaProjects/SVOScanner/src/main/java/gui/UIMain.java
 /home/hanna/IdeaProjects/SVOScanner/src/main/java/burp/BurpExtender.java
 /home/hanna/IdeaProjects/SVOScanner/src/main/java/gui/UIAbout.java
-/home/hanna/IdeaProjects/SVOScanner/src/main/java/detection/resultDetection.java
-/home/hanna/IdeaProjects/SVOScanner/src/main/java/detection/diffSites.java
+/home/hanna/IdeaProjects/SVOScanner/src/main/java/burp/RelevantInfo.java
 /home/hanna/IdeaProjects/SVOScanner/src/main/java/gui/UIHowTo.java
-/home/hanna/IdeaProjects/SVOScanner/src/main/java/detection/diffSitesTest.java
+/home/hanna/IdeaProjects/SVOScanner/src/main/java/scanIssues/CustomScanIssue.java
 /home/hanna/IdeaProjects/SVOScanner/src/main/java/detection/SessionHandling.java
-/home/hanna/IdeaProjects/SVOScanner/src/main/java/burp/unrelevantInfo.java
 /home/hanna/IdeaProjects/SVOScanner/src/main/java/gui/UITab.java
+/home/hanna/IdeaProjects/SVOScanner/src/main/java/scanIssues/SVOScanIssue.java

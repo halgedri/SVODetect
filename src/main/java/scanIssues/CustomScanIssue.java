@@ -1,4 +1,4 @@
-package scanner;
+package scanIssues;
 
 import burp.IHttpRequestResponse;
 import burp.IHttpService;
@@ -83,7 +83,6 @@ public class CustomScanIssue implements IScanIssue {
     }
 
     @Override
-    public IHttpService getHttpService() {
-        return httpService;
-    }
+    public IHttpService getHttpService() { return httpService;
+        }
 }

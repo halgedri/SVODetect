@@ -22,6 +22,12 @@ public class UIHowTo extends JPanel {
     private JLabel explaination4;
     private JLabel explaination5;
     private JLabel explaination6;
+    private JLabel explaination7;
+    private JLabel explaination8;
+    private JLabel explaination9;
+    private JLabel explaination10;
+    private JLabel explaination11;
+    private JLabel explaination12;
 
     public UIHowTo(IBurpExtenderCallbacks callbacks) {
         this.callbacks = callbacks;
@@ -48,6 +54,12 @@ public class UIHowTo extends JPanel {
         explaination4 = new JLabel();
         explaination5 = new JLabel();
         explaination6 = new JLabel();
+        explaination7 = new JLabel();
+        explaination8 = new JLabel();
+        explaination9 = new JLabel();
+        explaination10 = new JLabel();
+        explaination11 = new JLabel();
+        explaination12 = new JLabel();
         GroupLayout layout;
 
         labelHowTo.setFont(new Font("Nimbus", Font.PLAIN, 19 ));
@@ -57,7 +69,19 @@ public class UIHowTo extends JPanel {
         //explaination1.setFont(new Font("Dialog", Font.PLAIN, 14 ));
         explaination1.setText("This Plug In is for Checking if your Application is vulnerable for Session Variable Overloading!");
 
-        explaination2.setText("The following Description will help you understand how SVO Detect works");
+        explaination2.setText("You already successfully extended your Burpuite with SVODetect.");
+
+        explaination3.setText("If you want to check, if your Application is vunerable for Session Variable Overloading you should follow these steps:");
+
+        explaination4.setText("1. Start a new Scan");
+        explaination5.setText("      a. Check Crawl and Audit");
+        explaination6.setText("      b. uncheck Ignore Protocols in URLs to scan (on the Scan Detail Page)");
+        explaination7.setText("      c. Enter the credentials to Enter the Application");
+        explaination8.setText("2. Let the Scanner Crawl the Website, lean back and wait for it to finish");
+        explaination9.setText("3. Check the Issue Activity on your Dashboard");
+        explaination10.setText("     a. If there was any Session Variable Overloading detected, try to exploit this Vulnerability manually");
+        explaination11.setText("ATTENTION! If no Session Variable Overloading was detected, this does not mean it is not possible for your Application.");
+        explaination12.setText("Good Luck in Finding your Vulnerabilites!");
 
 
         layout = new GroupLayout(this);
@@ -69,7 +93,17 @@ public class UIHowTo extends JPanel {
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                     .addComponent(labelHowTo)
                                     .addComponent(explaination1)
-                                    .addComponent(explaination2))
+                                    .addComponent(explaination2)
+                                        .addComponent(explaination3)
+                                        .addComponent(explaination4)
+                                        .addComponent(explaination5)
+                                        .addComponent(explaination6)
+                                        .addComponent(explaination7)
+                                        .addComponent(explaination8)
+                                        .addComponent(explaination9)
+                                        .addComponent(explaination10)
+                                        .addComponent(explaination11)
+                                        .addComponent(explaination12))
                                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -81,6 +115,28 @@ public class UIHowTo extends JPanel {
                                 .addComponent(explaination1)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(explaination2)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination3)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination4)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination5)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination6)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination7)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination8)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination9)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(explaination10)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addContainerGap()
+                                .addComponent(explaination11)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addContainerGap()
+                                .addComponent(explaination12)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addContainerGap())
         );
