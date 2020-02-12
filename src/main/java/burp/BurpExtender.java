@@ -14,6 +14,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
     private IBurpExtenderCallbacks callbacks;
     public IExtensionHelpers helpers;
     private PrintWriter stdout;
+    private PrintWriter stderr;
     private UITab uiTab;
 
     private static final String extensionName = "SVODetect";
@@ -21,12 +22,8 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
     private List<IScanIssue> issues;
     private RelevantInfo relevantInfo = new RelevantInfo();
     public List<String> importantAttributesList;
-    public List<int[]> responseTokenHighlights;
     private HashMap<URL, byte[]> baseResponseMap = new HashMap<URL, byte[]>();
 
-    private IScanIssue oldIssue = null;
-
-    int counterBeginning = 0;
 
     @Override
     public void registerExtenderCallbacks(IBurpExtenderCallbacks callbacks) {
@@ -35,6 +32,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
         helpers = callbacks.getHelpers();
 
         stdout = new PrintWriter(callbacks.getStdout(), true);
+        stderr = new PrintWriter(callbacks.getStderr(), true);
 
         callbacks.setExtensionName(extensionName);
 
@@ -179,8 +177,9 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
             short scanResponseStatusCode = helpers.analyzeResponse(scanResponse).getStatusCode();
 
             if (scanResponseStatusCode == 404) {
+                stderr.println("404 Error at :" + url);
             } else if (scanResponseStatusCode == 500) {
-                stdout.println("SERVER ERROR! Check your Application and try a new Scan");
+                stderr.println("500 Server Error");
                 break;
             } else {
                 issue = analyseResponseDifferences(baseResponse, scanRequestResponse, insertionPointUrlAsString, insertionPointParameterList);
