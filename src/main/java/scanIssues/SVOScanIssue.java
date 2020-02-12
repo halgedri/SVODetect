@@ -4,6 +4,8 @@ import burp.IBurpExtenderCallbacks;
 import burp.IExtensionHelpers;
 import burp.IHttpRequestResponse;
 
+import java.util.List;
+
 
 public class SVOScanIssue extends CustomScanIssue {
 

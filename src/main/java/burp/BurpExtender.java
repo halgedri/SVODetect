@@ -21,6 +21,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
     private List<IScanIssue> issues;
     private RelevantInfo relevantInfo = new RelevantInfo();
     public List<String> importantAttributesList;
+    public List<int[]> responseTokenHighlights;
     private HashMap<URL, byte[]> baseResponseMap = new HashMap<URL, byte[]>();
 
     private IScanIssue oldIssue = null;
@@ -66,7 +67,6 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
 
         IHttpRequestResponse[] siteMap = callbacks.getSiteMap(baseRequestHost);
 
-        // For every Item in siteMap a new Request is build
         for (IHttpRequestResponse siteMapReqRep : siteMap) {
 
             URL siteMapUrl = helpers.analyzeRequest(siteMapReqRep).getUrl();
@@ -82,8 +82,6 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
         return null;
     }
 
-
-    //iScannerInsertionPoint reagiert auf POST
     @Override
     public List<IScanIssue> doActiveScan(IHttpRequestResponse iHttpRequestResponse, IScannerInsertionPoint iScannerInsertionPoint) {
         issues = new ArrayList<>();
@@ -216,7 +214,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck {
             }
         }
 
-        if (variantAttributesCounter >= 2) { //um false-positives zu minimieren, mit der Zahl variieren, min. was sich ändert ist der Username
+        if (variantAttributesCounter >= 2) {
             issue = new SVOScanIssue(scanRequestResponse, insertionPointUrl, insertionPointParameters, helpers, callbacks);
             return issue;
         }

@@ -79,7 +79,7 @@ public class CustomScanIssue implements IScanIssue {
 
     @Override
     public IHttpRequestResponse[] getHttpMessages() {
-        return new IHttpRequestResponse[0];
+        return httpMessages;
     }
 
     @Override
