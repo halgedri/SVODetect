@@ -24,6 +24,7 @@ public class SVOScanIssue extends CustomScanIssue {
 
     public SVOScanIssue(IHttpRequestResponse scanRequestResponse, String insertionPointUrl, String insertionPointParameters, IExtensionHelpers helpers, IBurpExtenderCallbacks callbacks) {
         super(
+
                 scanRequestResponse.getHttpService(),
                 new IHttpRequestResponse[] {callbacks.applyMarkers(scanRequestResponse,null,null)},
                 helpers.analyzeRequest(scanRequestResponse).getUrl(),

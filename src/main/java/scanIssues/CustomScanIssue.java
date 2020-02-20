@@ -83,6 +83,7 @@ public class CustomScanIssue implements IScanIssue {
     }
 
     @Override
-    public IHttpService getHttpService() { return httpService;
+    public IHttpService getHttpService() {
+        return httpService;
         }
 }
